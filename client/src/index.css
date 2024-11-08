@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+  --main-color:#1B1B1B;
+  --our-green:#24F07D;
+}
+
+html{
+  font-family: "Inter", sans-serif;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+
+.bg-main{
+  background-color: var(--main-color);
+}
+
+.our-green{
+  color: var(--our-green);
+}
