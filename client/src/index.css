@@ -4,6 +4,10 @@
 
 :root{
   --main-color:#1B1B1B;
+  --secondery-color:#121212;
+  --third-color:#1C1C1B;
+  --border-color:#252524;
+  --text-color:#676A6C;
   --our-green:#24F07D;
 }
 
@@ -23,3 +27,24 @@ body{
 .our-green{
   color: var(--our-green);
 }
+
+.secondary-color{
+  background-color: var(--secondery-color);
+}
+
+.third-color{
+  background-color: var(--third-color);
+}
+
+.border-color{
+  border: 1px solid var(--border-color);
+}
+
+.text-color{
+  color: var(--text-color);
+}
+
+.our-green{
+  color: var(--our-green);
+}
+
