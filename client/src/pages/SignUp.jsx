@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [formData, setFormData] = useState({});
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     try {
@@ -23,7 +24,8 @@ export default function SignUp() {
         setLoading(false);
       }
       setLoading(false);
-      console.log(data);
+      setError(null)
+      navigate('/sign-in')
     } catch (error) {
       setLoading(false);
       setError(error.message);
@@ -73,6 +75,7 @@ export default function SignUp() {
             sign in
           </Link>
         </p>
+        {error && <p className="text-red-500">{error}</p>}
         <button
           disabled={loading}
           className="our-green third-color border-color p-3 rounded-lg mt-8 uppercase font-semibold hover:opacity-75"
