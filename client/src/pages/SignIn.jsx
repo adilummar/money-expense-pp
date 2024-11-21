@@ -11,7 +11,7 @@ export default function SignIn() {
     try {
       e.preventDefault();
       setLoading(true);
-      const res = await fetch("http://localhost:2999/api/auth/sign-in", {
+      const res = await fetch("/api/auth/sign-in", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -22,6 +22,7 @@ export default function SignIn() {
       if (data.success === false) {
         setError(data.message);
         setLoading(false);
+        return;
       }
       setLoading(false);
       setError(null)
